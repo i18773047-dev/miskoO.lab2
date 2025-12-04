@@ -1,0 +1,119 @@
+:root {
+  --font: Arial, sans-serif;
+  --main-bg-opacity: 0.5;
+  --header-bg-opacity: 0.7;
+  --section-bg-opacity: 0.4;
+  --highlight-color: #FFD700; /* для посилань */
+}
+
+body {
+  background-image: url("../images/фон.jpg"); 
+  background-size: cover;       
+  background-attachment: fixed; 
+  background-position: center;  
+  color: #ffffff;                 
+  font-family: var(--font);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  background-color: rgba(0, 0, 0, var(--header-bg-opacity));
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+p {
+  background-color: rgba(0, 0, 0, var(--main-bg-opacity));
+  display: inline-block;
+  padding: 12px 15px;
+  border-radius: 6px;
+  width: 60%;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--highlight-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fffacd; /* трохи світліший відтінок */
+}
+
+img {
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+::selection {
+  background-color: #000000; 
+  color: var(--highlight-color);
+}
+
+/* Flex секції */
+.flex-section {
+  margin-top: 40px;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, var(--section-bg-opacity));
+  border-top: 2px solid #ffffff;
+}
+
+.flex-section h2 {
+  margin-bottom: 30px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-item {
+  background-color: rgba(0, 0, 0, var(--main-bg-opacity));
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flex-item:hover {
+  transform: scale(1.02); /* більш стриманий hover */
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.flex-item img {
+  border-radius: 6px;
+  border: 2px solid #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 600px) {
+  p {
+    width: 90%;
+  }
+}
+ul li a {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+ul li a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
